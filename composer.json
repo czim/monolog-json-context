@@ -1,6 +1,6 @@
 {
     "name": "czim/monolog-json-context",
-    "description": "Json Context for Monolog",
+    "description": "JSON Context for Monolog",
     "authors": [
         {
             "name": "Coen Zimmerman",
