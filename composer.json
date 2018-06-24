@@ -1,0 +1,35 @@
+{
+    "name": "czim/monolog-json-context",
+    "description": "Json Context for Monolog",
+    "authors": [
+        {
+            "name": "Coen Zimmerman",
+            "email": "coen@pixelindustries.com"
+        }
+    ],
+    "keywords": [ "monolog", "formatting", "json" ],
+    "homepage": "https://github.com/czim",
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7",
+        "mockery/mockery": "0.9.*",
+        "satooshi/php-coveralls": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Czim\\MonologJsonContext\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Czim\\MonologJsonContext\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
