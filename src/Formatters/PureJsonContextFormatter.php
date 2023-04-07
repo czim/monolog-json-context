@@ -1,10 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Czim\MonologJsonContext\Formatters;
 
 /**
- * Class PureJsonContextFormatter
- *
  * Formats lines like:
  *  <json object>\n
  *
@@ -20,7 +20,6 @@ namespace Czim\MonologJsonContext\Formatters;
  */
 class PureJsonContextFormatter extends AbstractContextFormatter
 {
-
     /**
      * Keys for properties that should not be allowed to bleed
      * to top-level from context array data. These will be
@@ -28,7 +27,7 @@ class PureJsonContextFormatter extends AbstractContextFormatter
      *
      * @var string[]
      */
-    protected $reservedTopLevelKeys = [
+    protected array $reservedTopLevelKeys = [
         'application',
         'channel',
         'level',
@@ -43,11 +42,11 @@ class PureJsonContextFormatter extends AbstractContextFormatter
     /**
      * Formats the context array in the desired log format.
      *
-     * @param array $vars
-     * @param array $context
+     * @param array<string, mixed> $vars
+     * @param array<string, mixed> $context
      * @return string
      */
-    protected function formatContext(array $vars, array $context)
+    protected function formatContext(array $vars, array $context): string
     {
         // Set top-level data in the 'context', merging to get those keys in front
         $context = array_merge([
@@ -60,5 +59,4 @@ class PureJsonContextFormatter extends AbstractContextFormatter
 
         return $this->stringify($context) . "\n";
     }
-
 }
