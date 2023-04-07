@@ -4,18 +4,18 @@
     "authors": [
         {
             "name": "Coen Zimmerman",
-            "email": "coen@pixelindustries.com"
+            "email": "opensource@czim.nl"
         }
     ],
     "keywords": [ "monolog", "formatting", "json" ],
     "homepage": "https://github.com/czim",
     "require": {
-        "php": ">=5.6.4"
+        "php": "^8.0",
+        "monolog/monolog": ">=3.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~5.7",
-        "mockery/mockery": "0.9.*",
-        "satooshi/php-coveralls": "^1.0"
+        "phpunit/phpunit": "^10.0",
+        "mockery/mockery": "^1.3"
     },
     "autoload": {
         "psr-4": {
